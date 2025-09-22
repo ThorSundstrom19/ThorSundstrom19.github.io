@@ -10,5 +10,12 @@
 body {
     color: var(--text);
     background: var(--background);
+    font-family: "jim nightshade";
 }
 
+h1,
+h2,
+h3{
+    color: var(--primary);
+    font-family: "caesar dressing";
+}

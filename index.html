@@ -7,7 +7,8 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=Jim+Nightshade&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=Jim+Nightshade&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -35,10 +36,19 @@
         href="https://www.google.com/search?q=google+doodles&rlz=1C1GCEA_enUS1178&oq=google+doodle&gs_lcrp=EgZjaHJvbWUqDQgAEAAYgwEYsQMYgAQyDQgAEAAYgwEYsQMYgAQyBggBEEUYOTINCAIQLhiDARixAxiABDIKCAMQABixAxiABDINCAQQABiDARixAxiABDINCAUQABiDARixAxiABDIKCAYQABixAxiABDIHCAcQABiABDINCAgQABiDARixAxiABDINCAkQABiDARixAxiABNIBCDU0NDRqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8&safe=active&ssui=on">Google
         Dodle</a>
     <br>
-    <img src="Idaho-Potato-scaled-1.jpg" alt="a potato" width="500" height="500">    
+    <img id="potato" src="Idaho-Potato-scaled-1.jpg" alt="a potato" width="500" height="500">
     <br>
-    <audio controls src="cool beat.wav"></audio>
-
+    <audio controls src="cool beat.wav" id="sound-effect"></audio>
+    <script>
+        let potatoEl = document.getElementById("potato");
+        let soundEl = document.getElementById("sound-effect");
+        potatoEl.addEventListener("mouseover", () => {
+            soundEl.play();
+        })
+        // potatoEl.addEventListener("mouseout", () => {
+        //     soundEl.stop();
+        // })
+    </script>
 
 </body>
 

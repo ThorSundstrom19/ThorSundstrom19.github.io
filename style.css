@@ -5,6 +5,18 @@
     --secondary: #849e8a;
     --accent: #a8afc6;
 
+*{
+    border: 1px solid white;
+    border-radius: 1.5cap;
+    padding: 0.5cap;
+    padding-left: 1.5cap;
+    margin: .5cap;
+    margin-inline-end: 5cap;
+    min-height: 2cap;
+    border-width: 0.1wsws cap;
+
+}
+
 }
 
 body {
@@ -34,10 +46,19 @@ h3 {
 }
 
 img {
-    transition: linear 20s;
+    transition: linear 10000s;
 }
 
 img:hover {
-    transform:  rotate(-7200deg) translateX(0px);
-    filter: hue-rotate(7200deg);
+    transform:  rotate(-3600000deg) translateX(0px);
+    filter: hue-rotate(3600000deg);
+}
+
+h1{
+    transition: linear 2s;
+}
+
+h1:hover{
+
+    transform: rotate(360deg)
 }

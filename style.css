@@ -46,7 +46,7 @@ h3 {
 }
 
 img {
-    transition: linear 10000s;
+    transition: linear 10000000s;
 }
 
 img:hover {

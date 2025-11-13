@@ -38,11 +38,11 @@
     <section id="part1">
         <h2>Part 1: Text and Number Inputs</h2>
         <label>
-            Name: Thor
+            Name:
             <input id="nameInput" type="text" placeholder="Enter your name">
         </label>
         <label>
-            Age: 14
+            Age:
             <input id="ageInput" type="number" min="0" max="120">
         </label>
         <button id="btnGreet">Greet Me</button>
@@ -83,7 +83,7 @@
         btnGreet.addEventListener("click", () => {
             let name = nameInput.value;
             let age = ageInput.value;
-            greetingOutput.innerText="hello"+ name + "you are"+ age +"years old"
+            greetingOutput.textContent= "Hello " + name; + "you are " + age; "years old"
             // TODO: Display a message like "Hello NAME, you are AGE years old!"
             // Challenge: If age < 13, show "You're just a kid!" instead.
         });

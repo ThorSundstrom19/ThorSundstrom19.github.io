@@ -4,7 +4,12 @@
     <title>Styled Quiz Box</title>
 
     <style>
-      body {
+      .message {
+        font-weight: bold;
+        margin-top: 10px;
+       }
+
+     body {
         width: 1800px;
         height: 1000px;
         display: flex;
@@ -60,7 +65,7 @@
 
       <div class="question-area">
         <p><strong>What is 1 + 1?</strong></p>
-        <input id="answer" type="text" placeholder="Type answer" />
+        <input id="answer" type="text" placeholder="Type answer" autocomplete="off" />
         <button id="submitBtn">Submit</button>
       </div>
     </div>
@@ -71,21 +76,23 @@ let submitBtn = document.getElementById("submitBtn");
 let answerInput = document.getElementById("answer");
 
 let message = document.createElement("p");
-document.body.appendChild(message);
+message.className = "message";
+document.querySelector(".quiz-window").appendChild(message);
 
 startBtn.onclick = function () {
   message.textContent = "Good luck!";
 };
 
 submitBtn.onclick = function () {
-  let userAnswer = answerInput.value;
+  let userAnswer = Number(answerInput.value);
 
-  if (userAnswer == "2") {
-  message.textContent = "Good job!";
-}
-if (userAnswer < 2 || userAnswer > 2) {
-  message.textContent = "Try again";
-}
+  if (userAnswer == 2) {
+    message.textContent = "Good job!";
+  }
+
+  if (userAnswer < 2 || userAnswer > 2) {
+    message.textContent = "Try again";
+  }
 
 };
     </script>

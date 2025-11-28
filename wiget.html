@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Styled Quiz Box</title>
+
+    <style>
+      body {
+        width: 1800px;
+        height: 1000px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #000000;
+        font-family: Arial, sans-serif;
+      }
+
+      .quiz-window {
+        width: 320px;
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      button {
+        background: #2563eb;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 6px;
+        font-size: 15px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      button:hover {
+        background: #2564ebde;
+      }
+
+      input {
+        width: 100%;
+        margin-top: 8px;
+        padding: 8px;
+        border-radius: 6px;
+        border: 1px solid #bbb;
+        font-size: 14px;
+      }
+
+      .question-area {
+        margin-top: 15px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="quiz-window">
+      <h2>Quize</h2>
+
+      <button id="startBtn">Start</button>
+
+      <div class="question-area">
+        <p><strong>What is 1 + 1?</strong></p>
+        <input id="answer" type="text" placeholder="Type answer" />
+        <button id="submitBtn">Submit</button>
+      </div>
+    </div>
+
+    <script>
+let startBtn = document.getElementById("startBtn");
+let submitBtn = document.getElementById("submitBtn");
+let answerInput = document.getElementById("answer");
+
+let message = document.createElement("p");
+document.body.appendChild(message);
+
+startBtn.onclick = function () {
+  message.textContent = "Good luck!";
+};
+
+submitBtn.onclick = function () {
+  let userAnswer = answerInput.value;
+
+  if (userAnswer == "2") {
+  message.textContent = "Good job!";
+}
+if (userAnswer < 2 || userAnswer > 2) {
+  message.textContent = "Try again";
+}
+
+};
+    </script>
+  </body>
+</html>

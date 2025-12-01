@@ -7,9 +7,9 @@
       .message {
         font-weight: bold;
         margin-top: 10px;
-       }
+      }
 
-     body {
+      body {
         width: 1800px;
         height: 1000px;
         display: flex;
@@ -65,36 +65,52 @@
 
       <div class="question-area">
         <p><strong>What is 1 + 1?</strong></p>
-        <input id="answer" type="text" placeholder="Type answer" autocomplete="off" />
+        <input
+          id="answer"
+          type="text"
+          placeholder="Type answer"
+          autocomplete="off"
+        />
         <button id="submitBtn">Submit</button>
       </div>
     </div>
 
     <script>
-let startBtn = document.getElementById("startBtn");
-let submitBtn = document.getElementById("submitBtn");
-let answerInput = document.getElementById("answer");
+      let startBtn = document.getElementById("startBtn");
+      let submitBtn = document.getElementById("submitBtn");
+      let answerInput = document.getElementById("answer");
+      let message = document.createElement("p");
+      message.className = "message";
+      document.querySelector(".quiz-window").appendChild(message);
 
-let message = document.createElement("p");
-message.className = "message";
-document.querySelector(".quiz-window").appendChild(message);
+      startBtn.onclick = function () {
+        message.textContent = "Good luck!";
+      };
 
-startBtn.onclick = function () {
-  message.textContent = "Good luck!";
-};
+      submitBtn.onclick = function () {
+        userAnswer = Number(answerInput.value);
+        
+        if (userAnswer == 2) {
+        message.textContent = "Good job!";
+      }
 
-submitBtn.onclick = function () {
-  let userAnswer = Number(answerInput.value);
+      if (userAnswer < 2 || userAnswer > 2) {
+        message.textContent = "Try again";
+      }
 
-  if (userAnswer == 2) {
-    message.textContent = "Good job!";
-  }
+      if (userAnswer == 67) { 
+        message.textContent = "67 67 67 67 67 67 67 67 67 67 67 67 67 67";
+       } 
+       
+       if (userAnswer > 99) { 
+        message.textContent = "You absulute neanderthal how the f**k did you get this high of a number";
+       }
 
-  if (userAnswer < 2 || userAnswer > 2) {
-    message.textContent = "Try again";
-  }
-
-};
+       if (userAnswer < 0) {
+        message.textContent = "you actually have to be slow to get this messege"
+       }
+      };
+      
     </script>
   </body>
 </html>
